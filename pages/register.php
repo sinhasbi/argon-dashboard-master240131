@@ -37,12 +37,22 @@ $rows = $result->fetch_all(MYSQLI_ASSOC);
       width: var(--width);
       height: var(--width);
       overflow: hidden;
+      position: relative;
 
       img {
         width: 100%;
         height: 100%;
         object-fit: cover;
       }
+
+      .deletebtn {
+        position: absolute;
+        left: 150px;
+        bottom: 0;
+        display: none;
+
+      }
+
     }
   </style>
 </head>
@@ -56,10 +66,16 @@ $rows = $result->fetch_all(MYSQLI_ASSOC);
         <h1 class="text-center mt-3">新增使用者</h1>
         <div class="row justify-content-center">
           <div class="col-lg-6 col-md-8 d-flex justify-content-center mt-8">
-            <div class="previewimage border">
-              <img class="" alt="圖片預覽" >
+            <div class="previewimage border ">
+              <img alt="圖片預覽">
+              <div>
+                <button class="btn btn-danger deletebtn" type="hidden" id="deletebtn">刪除圖片</button>
+              </div>
+
             </div>
+
           </div>
+
           <div class="col-lg-6 col-md-8">
 
 
@@ -101,7 +117,7 @@ $rows = $result->fetch_all(MYSQLI_ASSOC);
             </div>
             <div class="mb-2">
               <label for="" class="form-label">圖片</label>
-              <input type="file" class="form-control" name="image">
+              <input type="file" class="form-control" name="image" id="imginput">
             </div>
             <div class="text-center mt-6 ">
               <button class="btn btn-primary px-10" type="submit">送出</button>
@@ -114,6 +130,9 @@ $rows = $result->fetch_all(MYSQLI_ASSOC);
     </form>
 
     <script>
+
+
+
       $('input').on('change', function (e) {
         // console.log(this.files[0]);
         const file = this.files[0];//將上傳檔案轉換為base64字串
@@ -123,10 +142,26 @@ $rows = $result->fetch_all(MYSQLI_ASSOC);
         fr.onload = function (e) {
           $('img').attr('src', e.target.result);//讀取的结果放入圖片
         };
+        $('#deletebtn').show();
 
         // 使用 readAsDataURL 將圖片轉成 Base64
         fr.readAsDataURL(file);
       });
+
+
+      const deletebtn = document.querySelector("#deletebtn")
+      const imginput = document.querySelector("#imginput")
+      deletebtn.addEventListener("click", function () {
+        // console.log("click");
+        event.preventDefault();
+        $('img').attr('src', '');
+
+        // deletebtn.type = 'hidden';
+        // 隱藏刪除按鈕
+        $('#deletebtn').hide();
+        imginput.value="";
+
+      })
     </script>
 
 
