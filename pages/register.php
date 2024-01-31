@@ -38,9 +38,10 @@ $rows = $result->fetch_all(MYSQLI_ASSOC);
       height: var(--width);
       overflow: hidden;
 
-      .img {
-        
-        object-fit: contain;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
       }
     }
   </style>
@@ -56,7 +57,7 @@ $rows = $result->fetch_all(MYSQLI_ASSOC);
         <div class="row justify-content-center">
           <div class="col-lg-6 col-md-8 d-flex justify-content-center mt-8">
             <div class="previewimage border">
-              <img alt="圖片預覽" width="400px" height="400px">
+              <img class="" alt="圖片預覽" >
             </div>
           </div>
           <div class="col-lg-6 col-md-8">
