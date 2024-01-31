@@ -80,10 +80,16 @@ if (isset($_GET["search"])) {
   <!-- 介面開始 -->
 
   <div class="min-height-300 bg-primary position-absolute w-100"></div>
-  <aside class="sidenav bg-white navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-4 " id="sidenav-main">
+
+
+  <aside
+    class="sidenav bg-white navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-4 "
+    id="sidenav-main">
     <div class="sidenav-header">
-      <i class="fas fa-times p-3 cursor-pointer text-secondary opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
-      <a class="navbar-brand m-0" href=" https://demos.creative-tim.com/argon-dashboard/pages/dashboard.html " target="_blank">
+      <i class="fas fa-times p-3 cursor-pointer text-secondary opacity-5 position-absolute end-0 top-0 d-none d-xl-none"
+        aria-hidden="true" id="iconSidenav"></i>
+      <a class="navbar-brand m-0" href=" https://demos.creative-tim.com/argon-dashboard/pages/dashboard.html "
+        target="_blank">
         <img src="../assets/img/logo-ct-dark.png" class="navbar-brand-img h-100" alt="main_logo">
         <span class="ms-1 font-weight-bold">MIDTERM PROJECT</span>
       </a>
@@ -93,7 +99,8 @@ if (isset($_GET["search"])) {
       <ul class="navbar-nav">
         <li class="nav-item">
           <a class="nav-link" href="./pages/dashboard.html">
-            <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+            <div
+              class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
               <i class="ni ni-tv-2 text-primary text-sm opacity-10"></i>
             </div>
             <span class="nav-link-text ms-1">主頁面
@@ -102,7 +109,8 @@ if (isset($_GET["search"])) {
         </li>
         <li class="nav-item">
           <a class="nav-link active" href="./pages/tables.html">
-            <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+            <div
+              class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
               <i class="ni ni-calendar-grid-58 text-warning text-sm opacity-10"></i>
             </div>
             <span class="nav-link-text ms-1">會員管理/註冊</span>
@@ -110,7 +118,8 @@ if (isset($_GET["search"])) {
         </li>
         <li class="nav-item">
           <a class="nav-link " href="./pages/billing.html">
-            <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+            <div
+              class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
               <i class="ni ni-credit-card text-success text-sm opacity-10"></i>
             </div>
             <span class="nav-link-text ms-1">商品管理</span>
@@ -118,7 +127,8 @@ if (isset($_GET["search"])) {
         </li>
         <li class="nav-item">
           <a class="nav-link " href="./pages/virtual-reality.html">
-            <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+            <div
+              class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
               <i class="ni ni-app text-info text-sm opacity-10"></i>
             </div>
             <span class="nav-link-text ms-1">商品類別管理</span>
@@ -126,7 +136,8 @@ if (isset($_GET["search"])) {
         </li>
         <li class="nav-item">
           <a class="nav-link " href="./pages/rtl.html">
-            <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+            <div
+              class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
               <i class="ni ni-world-2 text-danger text-sm opacity-10"></i>
             </div>
             <span class="nav-link-text ms-1">文章管理</span>
@@ -134,7 +145,8 @@ if (isset($_GET["search"])) {
         </li>
         <li class="nav-item">
           <a class="nav-link " href="./pages/rtl.html">
-            <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+            <div
+              class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
               <i class="ni ni-world-2 text-danger text-sm opacity-10"></i>
             </div>
             <span class="nav-link-text ms-1">訂單管理</span>
@@ -142,7 +154,8 @@ if (isset($_GET["search"])) {
         </li>
         <li class="nav-item">
           <a class="nav-link " href="./pages/rtl.html">
-            <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+            <div
+              class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
               <i class="ni ni-world-2 text-danger text-sm opacity-10"></i>
             </div>
             <span class="nav-link-text ms-1">講師管理</span>
@@ -150,7 +163,8 @@ if (isset($_GET["search"])) {
         </li>
         <li class="nav-item">
           <a class="nav-link " href="./pages/rtl.html">
-            <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+            <div
+              class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
               <i class="ni ni-world-2 text-danger text-sm opacity-10"></i>
             </div>
             <span class="nav-link-text ms-1">課程管理</span>
@@ -158,7 +172,8 @@ if (isset($_GET["search"])) {
         </li>
         <li class="nav-item">
           <a class="nav-link " href="./pages/rtl.html">
-            <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+            <div
+              class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
               <i class="ni ni-world-2 text-danger text-sm opacity-10"></i>
             </div>
             <span class="nav-link-text ms-1">優惠券管理</span>
@@ -170,7 +185,8 @@ if (isset($_GET["search"])) {
         </li>
         <li class="nav-item">
           <a class="nav-link " href="../pages/profile.html">
-            <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+            <div
+              class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
               <i class="ni ni-single-02 text-dark text-sm opacity-10"></i>
             </div>
             <span class="nav-link-text ms-1">個人檔案</span>
@@ -178,7 +194,8 @@ if (isset($_GET["search"])) {
         </li>
         <li class="nav-item">
           <a class="nav-link " href="../pages/register.php">
-            <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+            <div
+              class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
               <i class="ni ni-single-copy-04 text-warning text-sm opacity-10"></i>
             </div>
             <span class="nav-link-text ms-1">註冊</span>
@@ -186,7 +203,8 @@ if (isset($_GET["search"])) {
         </li>
         <li class="nav-item">
           <a class="nav-link " href="../pages/sign-up.php">
-            <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+            <div
+              class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
               <i class="ni ni-collection text-info text-sm opacity-10"></i>
             </div>
             <span class="nav-link-text ms-1">登出</span>
@@ -198,7 +216,8 @@ if (isset($_GET["search"])) {
   </aside>
   <main class="main-content position-relative border-radius-lg ">
     <!-- Navbar -->
-    <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl " id="navbarBlur" data-scroll="false">
+    <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl " id="navbarBlur"
+      data-scroll="false">
       <div class="container-fluid py-1 px-3">
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
@@ -243,10 +262,12 @@ if (isset($_GET["search"])) {
           <form action="" method="get">
 
             <div class="input-group mb-3 align-items-center">
-              <input type="text" class="form-control" placeholder="Search...." aria-label="Serach Name" name="search" aria-describedby="button-addon2" <?php if (isset($_GET["search"])) :
-                                                                                                                                                          $searchValue = $_GET["search"];
-                                                                                                                                                        ?> value="<?= $searchValue ?> <?php endif; ?>">
-              <button class="btn btn-primary" type="submit" id="button-addon2"><i class="fa-solid fa-magnifying-glass fa-fw"></i></button>
+              <input type="text" class="form-control" placeholder="Search...." aria-label="Serach Name" name="search"
+                aria-describedby="button-addon2" <?php if (isset($_GET["search"])):
+                  $searchValue = $_GET["search"];
+                  ?> value="<?= $searchValue ?> <?php endif; ?>">
+              <button class="btn btn-primary" type="submit" id="button-addon2"><i
+                  class="fa-solid fa-magnifying-glass fa-fw"></i></button>
 
             </div>
           </form>
@@ -279,9 +300,11 @@ if (isset($_GET["search"])) {
 
                       <div class="btn-group">
                         <a class="btn btn-primary <?php if ($order == 1)
-                                                    echo "active" ?>" href="tables.php?order=1&p=<?= $p ?>">id<i class="fa-solid fa-arrow-down-1-9 fa-fw"></i></a>
+                          echo "active" ?>" href="tables.php?order=1&p=<?= $p ?>">id<i
+                            class="fa-solid fa-arrow-down-1-9 fa-fw"></i></a>
                         <a class="btn btn-primary <?php if ($order == 2)
-                                                    echo "active" ?>" href="tables.php?order=2&p=<?= $p ?>">id<i class="fa-solid fa-arrow-down-9-1 fa-fw"></i></a>
+                          echo "active" ?>" href="tables.php?order=2&p=<?= $p ?>">id<i
+                            class="fa-solid fa-arrow-down-9-1 fa-fw"></i></a>
 
                       </div>
                     </div>
@@ -326,8 +349,8 @@ if (isset($_GET["search"])) {
                     <?php
                     if ($result) {
                       $rows = $result->fetch_all(MYSQLI_ASSOC);
-                      foreach ($rows as $user) :
-                    ?>
+                      foreach ($rows as $user):
+                        ?>
                         <tr>
                           <td class="text-center">
                             <p class="text-xs text-secondary mb-0">
@@ -338,7 +361,8 @@ if (isset($_GET["search"])) {
                             <div class="d-flex px-2 py-1">
                               <div>
                                 <img src="../assets/img/team-2.jpg" class="avatar avatar-sm me-3" alt="user1">
-                                <img src="../images/<?= $user["img"] ?>" class="avatar avatar-sm me-3" alt="<?= $user["name"] ?>">
+                                <img src="../images/<?= $user["img"] ?>" class="avatar avatar-sm me-3"
+                                  alt="<?= $user["name"] ?>">
 
                               </div>
                               <div class="d-flex flex-column justify-content-center">
@@ -391,25 +415,30 @@ if (isset($_GET["search"])) {
 
                             <!-- 查看使用者詳細資料 -->
 
-                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop<?= $user["id"] ?>">
+                            <button class="btn btn-primary" data-bs-toggle="modal"
+                              data-bs-target="#staticBackdrop<?= $user["id"] ?>">
                               <i class="fa-solid fa-eye fa-fw text-white"></i></button>
 
                             <!-- MODAL模型 -->
-                            <div class="modal fade" id="staticBackdrop<?= $user["id"] ?>" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal fade" id="staticBackdrop<?= $user["id"] ?>" data-bs-backdrop="static"
+                              data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                              aria-hidden="true">
                               <div class="modal-dialog modal-xl">
                                 <div class="modal-content">
                                   <div class="modal-header">
                                     <h1 class="modal-title fs-5" id="staticBackdropLabel">
                                       <?= $user["name"] ?>
                                     </h1>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                      aria-label="Close"></button>
                                   </div>
                                   <div class="modal-body">
                                     <div class="container">
 
                                       <div class="row">
                                         <div class="col-4 ">
-                                          <img src="../images/<?= $user["img"] ?>" alt="<?= $user["name"] ?>" width="300px" height="300px" class="mt-3">
+                                          <img src="../images/<?= $user["img"] ?>" alt="<?= $user["name"] ?>" width="300px"
+                                            height="300px" class="mt-3">
                                         </div>
                                         <div class="col-8">
                                           <table class="table table-bordered">
@@ -473,37 +502,35 @@ if (isset($_GET["search"])) {
                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
                                     <div>
                                       <!-- 修改 -->
-                                      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editModal<?= $user["id"] ?>">
+                                      <button class="btn btn-primary" data-bs-toggle="modal"
+                                        data-bs-target="#editModal<?= $user["id"] ?>">
                                         修改
                                       </button>
                                       <!-- 刪除 -->
-                                      <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#confirmModal<?= $user["id"] ?>" role="button"><i class="fa-solid fa-trash fa-fw"></i></button>
+                                      <button class="btn btn-danger" data-bs-toggle="modal"
+                                        data-bs-target="#confirmModal<?= $user["id"] ?>" role="button"><i
+                                          class="fa-solid fa-trash fa-fw"></i></button>
                                     </div>
                                   </div>
                                 </div>
                               </div>
                             </div>
-
-                            <!-- 刪除按鈕 -->
-
-                            <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#confirmModal<?= $user["id"] ?>" role="button">
-                              <i class="fa-solid fa-trash fa-fw"></i></button>
-
-
-
                             <!-- 按修改會跳出來的東西 (完成)-->
-                            <div class="modal fade" id="editModal<?= $user["id"] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                              <div class="modal-dialog-xl">
+                            <div class="modal fade" id="editModal<?= $user["id"] ?>" tabindex="-1"
+                              aria-labelledby="exampleModalLabel" aria-hidden="true">
+                              <div class="modal-dialog modal-xl">
                                 <div class="modal-content">
                                   <div class="modal-header">
                                     <h1 class="modal-title fs-5" id="exampleModalLabel">修改資料</h1>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                      aria-label="Close"></button>
                                   </div>
                                   <div class="row">
 
                                     <div class="col-4 d-flex justify-content-center mt-3">
                                       <div class="previewimage border">
-                                      <img src="../images/<?= $user["img"] ?>" alt="<?= $user["name"] ?>" width="300px" height="300px" class="mt-3">
+                                        <img src="../images/<?= $user["img"] ?>" alt="<?= $user["name"] ?>" width="300px"
+                                          height="300px" class="mt-3">
                                       </div>
                                     </div>
 
@@ -517,80 +544,106 @@ if (isset($_GET["search"])) {
 
                                         <table class="table table-bordered">
 
-                                          <input type="hidden" class="form-control" name="editId" value="<?= $user["id"] ?>">
+                                          <input type="hidden" class="form-control" name="editId"
+                                            value="<?= $user["id"] ?>">
 
                                           <tr>
                                             <th>名字</th>
                                             <td>
-                                              <input type="text" class="form-control" name="editName" value="<?= $user["name"] ?>">
+                                              <input type="text" class="form-control" name="editName"
+                                                value="<?= $user["name"] ?>">
 
                                             </td>
                                           </tr>
                                           <tr>
                                             <th>信箱</th>
                                             <td>
-                                              <input type="text" class="form-control" name="editEmail" value="<?= $user["email"] ?>">
+                                              <input type="text" class="form-control" name="editEmail"
+                                                value="<?= $user["email"] ?>">
                                             </td>
                                           </tr>
                                           <tr>
                                             <th>生日</th>
                                             <td>
-                                              <input type="date" class="form-control" name="editBirthday" value="<?= $user["birthday"] ?>">
+                                              <input type="date" class="form-control" name="editBirthday"
+                                                value="<?= $user["birthday"] ?>">
                                             </td>
                                           </tr>
                                           <tr>
                                             <th>手機號碼</th>
-                                            <td><input type="text" class="form-control" name="editPhone" value=" <?= $user["phone"] ?>">
+                                            <td><input type="text" class="form-control" name="editPhone"
+                                                value=" <?= $user["phone"] ?>">
                                             </td>
                                           </tr>
                                           <tr>
                                             <th>地址</th>
                                             <td>
-                                              <input type="text" class="form-control" name="editAddress" value="<?= $user["address"] ?>">
+                                              <input type="text" class="form-control" name="editAddress"
+                                                value="<?= $user["address"] ?>">
                                             </td>
                                           </tr>
                                           <tr>
                                             <th>信用卡號</th>
                                             <td>
-                                              <input type="text" class="form-control" name="editCreditNumber" value="<?= $user["credit_number"] ?>">
+                                              <input type="text" class="form-control" name="editCreditNumber"
+                                                value="<?= $user["credit_number"] ?>">
                                             </td>
                                           </tr>
 
                                         </table>
+                                        <div class="modal-footer">
+                                          <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">取消</button>
+                                          <button type="submit" class="btn btn-danger">確認</button>
+                                        </div>
+                                      </form>
                                     </div>
 
-                                    <div class="modal-footer">
-                                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
-                                      <button type="submit" class="btn btn-danger">確認</button>
-                                    </div>
-                                    </form>
+
+
 
                                   </div>
                                 </div>
                               </div>
 
-                              <!-- 按刪除會跳出來的東西 -->
-                              <div class="modal fade" id="confirmModal<?= $user["id"] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                <div class="modal-dialog">
-                                  <div class="modal-content">
-                                    <div class="modal-header">
-                                      <h1 class="modal-title fs-5" id="exampleModalLabel">刪除使用者</h1>
-                                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">
-                                      確認刪除?
-                                    </div>
-                                    <div class="modal-footer">
-                                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
-                                      <a type="button" href="doDeleteUser.php?id=<?= $user["id"] ?>" class="btn btn-danger" role="button">確認</a>
-                                    </div>
+
+                            </div>
+                            <!-- 按刪除會跳出來的東西 -->
+                            <div class="modal fade" id="confirmModal<?= $user["id"] ?>" tabindex="-1"
+                              aria-labelledby="exampleModalLabel" aria-hidden="true">
+                              <div class="modal-dialog">
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">刪除使用者</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                      aria-label="Close"></button>
+                                  </div>
+                                  <div class="modal-body">
+                                    確認刪除?
+                                  </div>
+                                  <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                                    <a type="button" href="doDeleteUser.php?id=<?= $user["id"] ?>" class="btn btn-danger"
+                                      role="button">確認</a>
                                   </div>
                                 </div>
                               </div>
+                            </div>
+
+
+                            <!-- 刪除按鈕 -->
+
+                            <button class="btn btn-danger" data-bs-toggle="modal"
+                              data-bs-target="#confirmModal<?= $user["id"] ?>" role="button">
+                              <i class="fa-solid fa-trash fa-fw"></i></button>
+
+
+
+
 
                           </td>
                         </tr>
-                    <?php
+                        <?php
                       endforeach;
                     } else {
                       echo "<tr><td colspan='7'>沒有符合使用者</td></tr>";
@@ -613,9 +666,9 @@ if (isset($_GET["search"])) {
                 <span aria-hidden="true">&laquo;</span>
               </a>
             </li>
-            <?php for ($i = 1; $i <= $perAmount; $i++) : ?>
+            <?php for ($i = 1; $i <= $perAmount; $i++): ?>
               <li class="page-item"><a class="page-link <?php if ($i == $p)
-                                                          echo "active" ?>" href="tables.php?order=1&p=<?= $i ?>">
+                echo "active" ?>" href="tables.php?order=1&p=<?= $i ?>">
                   <?= $i ?>
                 </a></li>
             <?php endfor; ?>
@@ -642,11 +695,11 @@ if (isset($_GET["search"])) {
             $startPage = max(1, $p - 1);
             $endPage = min($perAmount, $startPage + 2);
 
-            for ($i = $startPage; $i <= $endPage; $i++) :
-            ?>
+            for ($i = $startPage; $i <= $endPage; $i++):
+              ?>
               <li class="page-item">
                 <a class="page-link <?php if ($i == $p)
-                                      echo "active" ?>" href="tables.php?order=1&p=<?= $i ?>">
+                  echo "active" ?>" href="tables.php?order=1&p=<?= $i ?>">
                   <?= $i ?>
                 </a>
               </li>
@@ -662,7 +715,7 @@ if (isset($_GET["search"])) {
 
         <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
         <script>
-          $(document).ready(function() {
+          $(document).ready(function () {
             var totalPages = <?= $perAmount ?>;
             var currentPage = <?= $p ?>;
 
@@ -684,7 +737,7 @@ if (isset($_GET["search"])) {
 
             generatePaginationItems();
 
-            $('.pagination').on('click', '#prev', function(e) {
+            $('.pagination').on('click', '#prev', function (e) {
               e.preventDefault();
               if (currentPage > 1) {
                 currentPage--;
@@ -692,7 +745,7 @@ if (isset($_GET["search"])) {
               }
             });
 
-            $('.pagination').on('click', '#next', function(e) {
+            $('.pagination').on('click', '#next', function (e) {
               e.preventDefault();
               if (currentPage < totalPages) {
                 currentPage++;
@@ -733,7 +786,8 @@ if (isset($_GET["search"])) {
                   <a href="https://www.creative-tim.com/blog" class="nav-link text-muted" target="_blank">Blog</a>
                 </li>
                 <li class="nav-item">
-                  <a href="https://www.creative-tim.com/license" class="nav-link pe-0 text-muted" target="_blank">License</a>
+                  <a href="https://www.creative-tim.com/license" class="nav-link pe-0 text-muted"
+                    target="_blank">License</a>
                 </li>
               </ul>
             </div>
@@ -767,7 +821,8 @@ if (isset($_GET["search"])) {
         </div>
         <a href="javascript:void(0)" class="switch-trigger background-color">
           <div class="badge-colors my-2 text-start">
-            <span class="badge filter bg-gradient-primary active" data-color="primary" onclick="sidebarColor(this)"></span>
+            <span class="badge filter bg-gradient-primary active" data-color="primary"
+              onclick="sidebarColor(this)"></span>
             <span class="badge filter bg-gradient-dark" data-color="dark" onclick="sidebarColor(this)"></span>
             <span class="badge filter bg-gradient-info" data-color="info" onclick="sidebarColor(this)"></span>
             <span class="badge filter bg-gradient-success" data-color="success" onclick="sidebarColor(this)"></span>
@@ -781,8 +836,10 @@ if (isset($_GET["search"])) {
           <p class="text-sm">Choose between 2 different sidenav types.</p>
         </div>
         <div class="d-flex">
-          <button class="btn bg-gradient-primary w-100 px-3 mb-2 active me-2" data-class="bg-white" onclick="sidebarType(this)">White</button>
-          <button class="btn bg-gradient-primary w-100 px-3 mb-2" data-class="bg-default" onclick="sidebarType(this)">Dark</button>
+          <button class="btn bg-gradient-primary w-100 px-3 mb-2 active me-2" data-class="bg-white"
+            onclick="sidebarType(this)">White</button>
+          <button class="btn bg-gradient-primary w-100 px-3 mb-2" data-class="bg-default"
+            onclick="sidebarType(this)">Dark</button>
         </div>
         <p class="text-sm d-xl-none d-block mt-2">You can change the sidenav type just on desktop view.</p>
         <!-- Navbar Fixed -->
@@ -801,14 +858,19 @@ if (isset($_GET["search"])) {
         </div>
         <a class="btn bg-gradient-dark w-100" href="https://www.creative-tim.com/product/argon-dashboard">Free
           Download</a>
-        <a class="btn btn-outline-dark w-100" href="https://www.creative-tim.com/learning-lab/bootstrap/license/argon-dashboard">View documentation</a>
+        <a class="btn btn-outline-dark w-100"
+          href="https://www.creative-tim.com/learning-lab/bootstrap/license/argon-dashboard">View documentation</a>
         <div class="w-100 text-center">
-          <a class="github-button" href="https://github.com/creativetimofficial/argon-dashboard" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star creativetimofficial/argon-dashboard on GitHub">Star</a>
+          <a class="github-button" href="https://github.com/creativetimofficial/argon-dashboard"
+            data-icon="octicon-star" data-size="large" data-show-count="true"
+            aria-label="Star creativetimofficial/argon-dashboard on GitHub">Star</a>
           <h6 class="mt-3">Thank you for sharing!</h6>
-          <a href="https://twitter.com/intent/tweet?text=Check%20Argon%20Dashboard%20made%20by%20%40CreativeTim%20%23webdesign%20%23dashboard%20%23bootstrap5&amp;url=https%3A%2F%2Fwww.creative-tim.com%2Fproduct%2Fargon-dashboard" class="btn btn-dark mb-0 me-2" target="_blank">
+          <a href="https://twitter.com/intent/tweet?text=Check%20Argon%20Dashboard%20made%20by%20%40CreativeTim%20%23webdesign%20%23dashboard%20%23bootstrap5&amp;url=https%3A%2F%2Fwww.creative-tim.com%2Fproduct%2Fargon-dashboard"
+            class="btn btn-dark mb-0 me-2" target="_blank">
             <i class="fab fa-twitter me-1" aria-hidden="true"></i> Tweet
           </a>
-          <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.creative-tim.com/product/argon-dashboard" class="btn btn-dark mb-0 me-2" target="_blank">
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.creative-tim.com/product/argon-dashboard"
+            class="btn btn-dark mb-0 me-2" target="_blank">
             <i class="fab fa-facebook-square me-1" aria-hidden="true"></i> Share
           </a>
         </div>

@@ -78,4 +78,4 @@ if ($_FILES["image"]["error"] == 0) {
 
 
 $conn->close();
-header("location: ../pages/register.php");
+header("location: ../pages/tables.php");
