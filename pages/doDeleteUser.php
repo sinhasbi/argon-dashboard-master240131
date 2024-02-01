@@ -13,5 +13,5 @@
 
     echo $sql;
     
-    header("location:../pages/tables.php");
+    header("location:../pages/member.php");
 ?>

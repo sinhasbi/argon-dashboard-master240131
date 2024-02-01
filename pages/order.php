@@ -23,9 +23,6 @@ exit; */
 $rowCount = $result->num_rows;
 $rows = $result->fetch_all(MYSQLI_ASSOC);
 
-
-
-
 ?>
 <pre>
   <?php
@@ -363,114 +360,18 @@ $rows = $result->fetch_all(MYSQLI_ASSOC);
 
                           <td class="align-middle text-center">
                             <button class="btn btn-primary" data-bs-toggle="modal"
-                              data-bs-target="#staticBackdrop<?= $user["id"] ?>">
+                              data-bs-target="#editBackdrop<?= $order["id"] ?>">
                               <i class="fa-solid fa-eye fa-fw text-white"></i></button>
 
-                            <!-- MODAL模型 -->
-                            <div class="modal fade" id="staticBackdrop<?= $user["id"] ?>" data-bs-backdrop="static"
-                              data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
-                              aria-hidden="true">
-                              <div class="modal-dialog modal-xl">
-                                <div class="modal-content">
-                                  <div class="modal-header">
-                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">
-                                      <?= $user["name"] ?>
-                                    </h1>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                      aria-label="Close"></button>
-                                  </div>
-                                  <div class="modal-body">
-                                    <div class="container">
-
-                                      <div class="row">
-                                        <div class="col-4 ">
-                                          <img src="../images/<?= $user["img"] ?>" alt="<?= $user["name"] ?>" width="300px"
-                                            height="300px" class="mt-3">
-                                        </div>
-                                        <div class="col-8">
-                                          <table class="table table-bordered">
-
-                                            <tr class="border-end">
-                                              <th>ID</th>
-                                              <td>
-                                                <?= $user["id"] ?>
-                                              </td>
-                                            </tr>
-                                            <tr class="border-end">
-                                              <th>名字</th>
-                                              <td>
-                                                <?= $user["name"] ?>
-                                              </td>
-                                            </tr>
-                                            <tr class="border-end">
-                                              <th>信箱</th>
-                                              <td>
-                                                <?= $user["email"] ?>
-                                              </td>
-                                            </tr>
-                                            <tr class="border-end">
-                                              <th>生日</th>
-                                              <td>
-                                                <?= $user["birthday"] ?>
-                                              </td>
-                                            </tr>
-                                            <tr class="border-end">
-                                              <th>手機號碼</th>
-                                              <td>
-                                                <?= $user["phone"] ?>
-                                              </td>
-                                            </tr>
-                                            <tr class="border-end">
-                                              <th>地址</th>
-                                              <td>
-                                                <?= $user["address"] ?>
-                                              </td>
-                                            </tr>
-                                            <tr class="border-end">
-                                              <th>信用卡號</th>
-                                              <td>
-                                                <?= $user["credit_number"] ?>
-                                              </td>
-                                            </tr>
-                                            <tr class="border-end">
-                                              <th>註冊時間</th>
-                                              <td>
-                                                <?= $user["created_at"] ?>
-                                              </td>
-                                            </tr>
-                                          </table>
-
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-
-                                  <div class="modal-footer d-flex justify-content-lg-between">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
-                                    <div>
-                                      <!-- 修改 -->
-                                      <button class="btn btn-primary" data-bs-toggle="modal"
-                                        data-bs-target="#editModal<?= $user["id"] ?>">
-                                        修改
-                                      </button>
-                                      <!-- 刪除 -->
-                                      <button class="btn btn-danger" data-bs-toggle="modal"
-                                        data-bs-target="#confirmModal<?= $user["id"] ?>" role="button"><i
-                                          class="fa-solid fa-trash fa-fw"></i>
-                                      </button>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
+                            >
                             <!-- 按修改會跳出來的東西 (完成)-->
-                            <div class="modal fade" id="editModal<?= $user["id"] ?>" tabindex="-1"
+                            <div class="modal fade" id="editModal<?= $order["id"] ?>" tabindex="-1"
                               aria-labelledby="exampleModalLabel" aria-hidden="true">
                               <div class="modal-dialog modal-xl">
                                 <form action="doEditUser.php" method="post">
                                   <div class="modal-content">
                                     <div class="modal-header">
-                                      <h1 class="modal-title fs-5" id="exampleModalLabel">修改資料</h1>
+                                      <h1 class="modal-title fs-5" id="exampleModalLabel">修改訂單資料</h1>
                                       <button type="button" class="btn-close" data-bs-dismiss="modal"
                                         aria-label="Close"></button>
                                     </div>
