@@ -443,49 +443,49 @@ if (isset($_GET["search"])) {
                                         <div class="col-8">
                                           <table class="table table-bordered">
 
-                                            <tr>
+                                            <tr class="border-end">
                                               <th>ID</th>
                                               <td>
                                                 <?= $user["id"] ?>
                                               </td>
                                             </tr>
-                                            <tr>
+                                            <tr class="border-end">
                                               <th>名字</th>
                                               <td>
                                                 <?= $user["name"] ?>
                                               </td>
                                             </tr>
-                                            <tr>
+                                            <tr class="border-end">
                                               <th>信箱</th>
                                               <td>
                                                 <?= $user["email"] ?>
                                               </td>
                                             </tr>
-                                            <tr>
+                                            <tr class="border-end">
                                               <th>生日</th>
                                               <td>
                                                 <?= $user["birthday"] ?>
                                               </td>
                                             </tr>
-                                            <tr>
+                                            <tr class="border-end">
                                               <th>手機號碼</th>
                                               <td>
                                                 <?= $user["phone"] ?>
                                               </td>
                                             </tr>
-                                            <tr>
+                                            <tr class="border-end">
                                               <th>地址</th>
                                               <td>
                                                 <?= $user["address"] ?>
                                               </td>
                                             </tr>
-                                            <tr>
+                                            <tr class="border-end">
                                               <th>信用卡號</th>
                                               <td>
                                                 <?= $user["credit_number"] ?>
                                               </td>
                                             </tr>
-                                            <tr>
+                                            <tr class="border-end">
                                               <th>註冊時間</th>
                                               <td>
                                                 <?= $user["created_at"] ?>
@@ -519,91 +519,100 @@ if (isset($_GET["search"])) {
                             <div class="modal fade" id="editModal<?= $user["id"] ?>" tabindex="-1"
                               aria-labelledby="exampleModalLabel" aria-hidden="true">
                               <div class="modal-dialog modal-xl">
-                                <div class="modal-content">
-                                  <div class="modal-header">
-                                    <h1 class="modal-title fs-5" id="exampleModalLabel">修改資料</h1>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                      aria-label="Close"></button>
-                                  </div>
-                                  <div class="row">
+                                <form action="doEditUser.php" method="post">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <h1 class="modal-title fs-5" id="exampleModalLabel">修改資料</h1>
+                                      <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                      <div class="container">
+                                        <div class="row">
 
-                                    <div class="col-4 d-flex justify-content-center mt-3">
-                                      <div class="previewimage border">
-                                        <img src="../images/<?= $user["img"] ?>" alt="<?= $user["name"] ?>" width="300px"
-                                          height="300px" class="mt-3">
+                                          <div class="col-4 ">
+                                            <img src="../images/<?= $user["img"] ?>" alt="<?= $user["name"] ?>"
+                                              width="300px" height="300px" class="mt-3">
+                                          </div>
+
+                                          <div class="col-8">
+                                            <input type="hidden" class="form-control" name="editId"
+                                              value="<?= $user["id"] ?>">
+
+
+                                            <!-- Form for editing user details -->
+
+
+
+                                            <table class="table table-bordered">
+
+
+
+
+
+
+
+                                              <tr class="border-end">
+                                                <th>名字</th>
+                                                <td>
+                                                  <input type="text" class="form-control" name="editName"
+                                                    value="<?= $user["name"] ?>">
+
+                                                </td>
+                                              </tr>
+                                              <tr class="border-end">
+                                                <th>信箱</th>
+                                                <td>
+                                                  <input type="text" class="form-control" name="editEmail"
+                                                    value="<?= $user["email"] ?>">
+                                                </td>
+                                              </tr>
+                                              <tr class="border-end">
+                                                <th>生日</th>
+                                                <td>
+                                                  <input type="date" class="form-control" name="editBirthday"
+                                                    value="<?= $user["birthday"] ?>">
+                                                </td>
+                                              </tr>
+                                              <tr class="border-end">
+                                                <th>手機號碼</th>
+                                                <td><input type="text" class="form-control" name="editPhone"
+                                                    value=" <?= $user["phone"] ?>">
+                                                </td>
+                                              </tr>
+                                              <tr class="border-end">
+                                                <th>地址</th>
+                                                <td>
+                                                  <input type="text" class="form-control" name="editAddress"
+                                                    value="<?= $user["address"] ?>">
+                                                </td>
+                                              </tr>
+                                              <tr class="border-end">
+                                                <th>信用卡號</th>
+                                                <td>
+                                                  <input type="text" class="form-control" name="editCreditNumber" style="width: 100%;"
+                                                    value="<?= $user["credit_number"] ?>">
+                                                </td>
+                                              </tr>
+
+                                            </table>
+
+
+
+
+
+                                          </div>
+                                        </div>
+
                                       </div>
                                     </div>
-
-                                    <div class="col-8">
-
-
-
-                                      <!-- Form for editing user details -->
-                                      <form action="doEditUser.php" method="post">
-                                        <input type="hidden" name="user_id" value="<?= $user["id"] ?>">
-
-                                        <table class="table table-bordered">
-
-                                          <input type="hidden" class="form-control" name="editId"
-                                            value="<?= $user["id"] ?>">
-
-                                          <tr>
-                                            <th>名字</th>
-                                            <td>
-                                              <input type="text" class="form-control" name="editName"
-                                                value="<?= $user["name"] ?>">
-
-                                            </td>
-                                          </tr>
-                                          <tr>
-                                            <th>信箱</th>
-                                            <td>
-                                              <input type="text" class="form-control" name="editEmail"
-                                                value="<?= $user["email"] ?>">
-                                            </td>
-                                          </tr>
-                                          <tr>
-                                            <th>生日</th>
-                                            <td>
-                                              <input type="date" class="form-control" name="editBirthday"
-                                                value="<?= $user["birthday"] ?>">
-                                            </td>
-                                          </tr>
-                                          <tr>
-                                            <th>手機號碼</th>
-                                            <td><input type="text" class="form-control" name="editPhone"
-                                                value=" <?= $user["phone"] ?>">
-                                            </td>
-                                          </tr>
-                                          <tr>
-                                            <th>地址</th>
-                                            <td>
-                                              <input type="text" class="form-control" name="editAddress"
-                                                value="<?= $user["address"] ?>">
-                                            </td>
-                                          </tr>
-                                          <tr>
-                                            <th>信用卡號</th>
-                                            <td>
-                                              <input type="text" class="form-control" name="editCreditNumber"
-                                                value="<?= $user["credit_number"] ?>">
-                                            </td>
-                                          </tr>
-
-                                        </table>
-                                        <div class="modal-footer">
-                                          <button type="button" class="btn btn-secondary"
-                                            data-bs-dismiss="modal">取消</button>
-                                          <button type="submit" class="btn btn-danger">確認</button>
-                                        </div>
-                                      </form>
+                                    <div class="modal-footer">
+                                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                                      <button type="submit" class="btn btn-danger">確認</button>
                                     </div>
 
-
-
-
                                   </div>
-                                </div>
+                                </form>
                               </div>
 
 
