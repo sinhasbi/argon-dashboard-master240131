@@ -110,7 +110,7 @@ if (isset($_GET["search"])) {
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="../pages/tables.php">
+          <a class="nav-link " href="../pages/tables.php">
             <div
               class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
               <i class="ni ni-calendar-grid-58 text-warning text-sm opacity-10"></i>
@@ -146,7 +146,7 @@ if (isset($_GET["search"])) {
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link " href="../pages/order.php">
+          <a class="nav-link active" href="./pages/rtl.html">
             <div
               class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
               <i class="ni ni-world-2 text-danger text-sm opacity-10"></i>
@@ -224,7 +224,7 @@ if (isset($_GET["search"])) {
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
             <li class="breadcrumb-item text-sm"><a class="opacity-5 text-white" href="javascript:;">主頁面</a></li>
-            <li class="breadcrumb-item text-sm text-white active" aria-current="page">會員管理/註冊</li>
+            <li class="breadcrumb-item text-sm text-white active" aria-current="page">訂單管理</li>
           </ol>
           <!-- <h6 class="font-weight-bolder text-white mb-0">主頁面</h6> -->
         </nav>
@@ -322,19 +322,18 @@ if (isset($_GET["search"])) {
                   <thead>
                     <tr>
 
-                      <th class="text-center text-secondary text-xxs font-weight-bolder opacity-7">ID</th>
+                      <th class="text-center text-secondary text-xxs font-weight-bolder opacity-7">訂單編號</th>
 
-                      <th class="text-center text-secondary text-xxs font-weight-bolder opacity-7 ">名字</th>
-                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">信箱
+                      <th class="text-center text-secondary text-xxs font-weight-bolder opacity-7 ">購買商品</th>
+                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">訂單總價
                       </th>
-                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">生日
+                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">購買人
                       </th>
-                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">手機號碼
+                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">成立時間
                       </th>
-                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">地址
+                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">訂單狀態
                       </th>
-                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">信用卡號
-                      </th>
+                      
                       <th class="text-secondary opacity-7"></th>
                     </tr>
                   </thead>
@@ -386,11 +385,7 @@ if (isset($_GET["search"])) {
                               <?= $user["address"] ?>
                             </span>
                           </td>
-                          <td class="align-middle text-center">
-                            <span class="text-secondary text-xs font-weight-bold">
-                              <?= $user["credit_number"] ?>
-                            </span>
-                          </td>
+                          
 
                           <td class="align-middle text-center">
                             <button class="btn btn-primary" data-bs-toggle="modal"
