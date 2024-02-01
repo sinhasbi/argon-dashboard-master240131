@@ -46,6 +46,11 @@ if (isset($_GET["search"])) {
 }
 
 
+
+
+
+
+
 //page
 
 
@@ -298,10 +303,10 @@ if (isset($_GET["search"])) {
                   共
                   <?= $userTotal ?> 筆
                 </div>
-                <div class="d-flex">
-                  <div class="me-2">
+                <div class="d-flex justify-content-end">
+                  
 
-                    <div class="btn-group">
+                    <div class="btn-group ">
                       <a class="btn btn-primary <?php if ($order == 1)
                         echo "active" ?>" href="tables.php?order=1&p=<?= $p ?>">id<i
                           class="fa-solid fa-arrow-down-1-9 fa-fw"></i></a>
@@ -310,7 +315,7 @@ if (isset($_GET["search"])) {
                           class="fa-solid fa-arrow-down-9-1 fa-fw"></i></a>
 
                     </div>
-                  </div>
+                  
                 </div>
               </div>
 
@@ -322,18 +327,18 @@ if (isset($_GET["search"])) {
                   <thead>
                     <tr>
 
-                      <th class="text-center text-secondary text-xxs font-weight-bolder opacity-7">ID</th>
+                      <th class="text-center text-secondary  font-weight-bolder opacity-7">ID</th>
 
-                      <th class="text-center text-secondary text-xxs font-weight-bolder opacity-7 ">名字</th>
-                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">信箱
+                      <th class="text-center text-secondary  font-weight-bolder opacity-7 ">名字</th>
+                      <th class="text-center text-uppercase text-secondary  font-weight-bolder opacity-7">信箱
                       </th>
-                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">生日
+                      <th class="text-center text-uppercase text-secondary  font-weight-bolder opacity-7">生日
                       </th>
-                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">手機號碼
+                      <th class="text-center text-uppercase text-secondary  font-weight-bolder opacity-7">手機號碼
                       </th>
-                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">地址
+                      <th class="text-center text-uppercase text-secondary  font-weight-bolder opacity-7">地址
                       </th>
-                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">信用卡號
+                      <th class="text-center text-uppercase text-secondary font-weight-bolder opacity-7">信用卡號
                       </th>
                       <th class="text-secondary opacity-7"></th>
                     </tr>
@@ -347,7 +352,7 @@ if (isset($_GET["search"])) {
 
                         <tr>
                           <td class="text-center">
-                            <p class="text-xs text-secondary mb-0">
+                            <p class="text-secondary mb-0">
                               <?= $user["id"] ?>
                             </p>
                           </td>
@@ -360,34 +365,34 @@ if (isset($_GET["search"])) {
 
                               </div>
                               <div class="d-flex flex-column justify-content-center">
-                                <h6 class="mb-0 text-sm">
+                                <p class="mb-0 ">
                                   <?= $user["name"] ?>
-                                </h6>
+                                </p>
                               </div>
                             </div>
                           </td>
                           <td>
-                            <p class="text-xs text-secondary mb-0">
+                            <p class="text-secondary mb-0">
                               <?= $user["email"] ?>
                             </p>
                           </td>
-                          <td class="align-middle text-center text-sm">
-                            <p class="text-xs text-secondary mb-0">
+                          <td class="align-middle text-center ">
+                            <p class=" text-secondary mb-0">
                               <?= $user["birthday"] ?>
                             </p>
                           </td>
                           <td class="align-middle text-center">
-                            <span class="text-secondary text-xs font-weight-bold">
+                            <span class="text-secondary  ">
                               <?= $user["phone"] ?>
                             </span>
                           </td>
                           <td class="align-middle text-center">
-                            <span class="text-secondary text-xs font-weight-bold">
+                            <span class="text-secondary  ">
                               <?= $user["address"] ?>
                             </span>
                           </td>
                           <td class="align-middle text-center">
-                            <span class="text-secondary text-xs font-weight-bold">
+                            <span class="text-secondary  ">
                               <?= $user["credit_number"] ?>
                             </span>
                           </td>
@@ -482,7 +487,7 @@ if (isset($_GET["search"])) {
                                       <!-- 修改 -->
                                       <button class="btn btn-primary" data-bs-toggle="modal"
                                         data-bs-target="#editModal<?= $user["id"] ?>">
-                                        修改
+                                        <i class="fa-solid fa-user-pen fa-fw"></i>
                                       </button>
                                       <!-- 刪除 -->
                                       <button class="btn btn-danger" data-bs-toggle="modal"
@@ -600,7 +605,11 @@ if (isset($_GET["search"])) {
                               </div>
                             </div>
 
-
+                            <!--修改按鈕 -->
+                            <button class="btn btn-primary" data-bs-toggle="modal"
+                              data-bs-target="#editModal<?= $user["id"] ?>">
+                              <i class="fa-solid fa-user-pen fa-fw"></i>
+                            </button>
                             <!-- 刪除按鈕 -->
                             <button class="btn btn-danger" data-bs-toggle="modal"
                               data-bs-target="#confirmModal<?= $user["id"] ?>" role="button">
@@ -621,42 +630,42 @@ if (isset($_GET["search"])) {
             </div>
 
             <!-- 會員資料結束 -->
-            <!-- 分頁按鈕 -->                  
-              <div class="d-flex justify-content-center">
+            <!-- 分頁按鈕 -->
+            <div class="d-flex justify-content-center">
 
-                <nav aria-label="Page navigation example">
-                  <ul class="pagination justify-content-center">
+              <nav aria-label="Page navigation example">
+                <ul class="pagination justify-content-center">
+                  <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Previous" id="prev">
+                      <span aria-hidden="true">&laquo;</span>
+                    </a>
+                  </li>
+
+                  <?php
+                  // 計算開始與結束的頁碼
+                  $startPage = max(1, $p - 1);
+                  $endPage = min($perAmount, $startPage + 2);
+
+                  for ($i = $startPage; $i <= $endPage; $i++):
+                    ?>
                     <li class="page-item">
-                      <a class="page-link" href="#" aria-label="Previous" id="prev">
-                        <span aria-hidden="true">&laquo;</span>
+                      <a class="page-link <?php if ($i == $p)
+                        echo "active" ?>" href="tables.php?order=1&p=<?= $i ?>">
+                        <?= $i ?>
                       </a>
                     </li>
+                  <?php endfor; ?>
 
-                    <?php
-                    // 計算開始與結束的頁碼
-                    $startPage = max(1, $p - 1);
-                    $endPage = min($perAmount, $startPage + 2);
-
-                    for ($i = $startPage; $i <= $endPage; $i++):
-                      ?>
-                      <li class="page-item">
-                        <a class="page-link <?php if ($i == $p)
-                          echo "active" ?>" href="tables.php?order=1&p=<?= $i ?>">
-                          <?= $i ?>
-                        </a>
-                      </li>
-                    <?php endfor; ?>
-
-                    <li class="page-item">
-                      <a class="page-link" href="#" aria-label="Next" id="next">
-                        <span aria-hidden="true">&raquo;</span>
-                      </a>
-                    </li>
-                  </ul>
-                </nav>
+                  <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next" id="next">
+                      <span aria-hidden="true">&raquo;</span>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
 
 
-              </div>             
+            </div>
             <!-- footer -->
             <footer class="footer pt-3 pb-3 ">
               <div class="container-fluid">

@@ -1,55 +1,40 @@
 <?php
 require_once("../db_connect.php");
-$p = 1;
-$perPage = 10;
+$p=1;
+$perAmount=10;
 
 
-//計算總數用的
-$sql = "SELECT * FROM user WHERE valid=1 ";
-$resultTotal = $conn->query($sql);
-$rowTotal = $resultTotal->fetch_all(MYSQLI_ASSOC);
+$sql="SELECT `order`.*,
+order_status.name AS order_status_name,
+user.name AS order_user,
+product.name AS order_product
 
-$userTotal = $resultTotal->num_rows;
+FROM `order`
 
-$perAmount = ceil($userTotal / $perPage);
+JOIN order_status ON `order`.order_status= order_status.id
+JOIN user ON `order`.user_id = user.id
+JOIN product ON `order`.product_id = product.id
+";
 
-
-
-//order
-if (isset($_GET["order"])) {
-  $order = $_GET["order"];
-  if ($order == 1) {
-    $orderString = "ORDER by id ASC";
-  } elseif ($order == 2) {
-    $orderString = "ORDER by id DESC";
-  }
-}
-
-if (isset($_GET["search"])) {
-  $search = $_GET["search"];
-  $sql = "SELECT * FROM user WHERE name LIKE '%$search%'  AND valid=1 ";
-} elseif (isset($_GET["p"]) || $_GET["search"] = "") {
-  $p = $_GET["p"];
-  $startIndex = ($p - 1) * $perPage;
-  $sql = "SELECT * FROM user WHERE valid=1  $orderString LIMIT $startIndex,$perPage ";
-} else {
-
-  $order = 1;
-  $orderString = "ORDER BY id ASC";
-  $sql = "SELECT * FROM user WHERE valid=1  $orderString LIMIT $perPage ";
-}
 
 $result = $conn->query($sql);
+/* echo "$result";
+exit; */
+$rowCount = $result->num_rows;
+$rows = $result->fetch_all(MYSQLI_ASSOC);
 
-if (isset($_GET["search"])) {
-  $userTotal = $result->num_rows;
-}
 
-
-//page
 
 
 ?>
+<pre>
+  <?php
+      // print_r($rows);
+      // exit;
+      
+  ?>
+
+</pre>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -80,7 +65,6 @@ if (isset($_GET["search"])) {
   <!-- 介面開始 -->
 
   <div class="min-height-300 bg-primary position-absolute w-100"></div>
-
 
   <aside
     class="sidenav bg-white navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-4 "
@@ -258,7 +242,7 @@ if (isset($_GET["search"])) {
     </nav>
 
 
-    <!-- 會員列表-->
+    <!-- 訂單列表-->
     <div class="container-fluid py-4">
       <div class="row">
         <div class="col-12">
@@ -296,7 +280,7 @@ if (isset($_GET["search"])) {
               <div class="py-2 d-flex justify-content-between align-items-center">
                 <div>
                   共
-                  <?= $userTotal ?> 筆
+                  <?= $rowCount ?> 筆
                 </div>
                 <div class="d-flex">
                   <div class="me-2">
@@ -316,7 +300,9 @@ if (isset($_GET["search"])) {
 
             </div>
             <div class="card-body px-0 pt-0 pb-2">
+              <!-- 資料開始載入 -->
               <div class="table-responsive p-0">
+                
 
                 <table class="table align-items-center mb-0">
                   <thead>
@@ -340,49 +326,37 @@ if (isset($_GET["search"])) {
                   <tbody>
                     <?php
                     if ($result) {
-                      $rows = $result->fetch_all(MYSQLI_ASSOC);
-                      foreach ($rows as $user):
+                      
+                      foreach ($rows as $order):
                         ?>
 
                         <tr>
                           <td class="text-center">
                             <p class="text-xs text-secondary mb-0">
-                              <?= $user["id"] ?>
+                              <?= $order["id"] ?>
                             </p>
                           </td>
-                          <td>
-                            <div class="d-flex px-2 py-1">
-                              <div>
-                                <img src="../assets/img/team-2.jpg" class="avatar avatar-sm me-3" alt="user1">
-                                <img src="../images/<?= $user["img"] ?>" class="avatar avatar-sm me-3"
-                                  alt="<?= $user["name"] ?>">
-
-                              </div>
-                              <div class="d-flex flex-column justify-content-center">
-                                <h6 class="mb-0 text-sm">
-                                  <?= $user["name"] ?>
-                                </h6>
-                              </div>
-                            </div>
+                          <td class="text-center">
+                          <?= $order["order_product"] ?>
                           </td>
                           <td>
                             <p class="text-xs text-secondary mb-0">
-                              <?= $user["email"] ?>
+                              <!--訂單總價 -->
                             </p>
                           </td>
                           <td class="align-middle text-center text-sm">
                             <p class="text-xs text-secondary mb-0">
-                              <?= $user["birthday"] ?>
+                              <?= $order["order_user"] ?>
                             </p>
                           </td>
                           <td class="align-middle text-center">
                             <span class="text-secondary text-xs font-weight-bold">
-                              <?= $user["phone"] ?>
+                              <?= $order["date"] ?>
                             </span>
                           </td>
                           <td class="align-middle text-center">
                             <span class="text-secondary text-xs font-weight-bold">
-                              <?= $user["address"] ?>
+                              <?= $order["order_status_name"] ?>
                             </span>
                           </td>
                           
@@ -615,43 +589,11 @@ if (isset($_GET["search"])) {
               </div>
             </div>
 
-            <!-- 會員資料結束 -->
+            <!-- 資料載入結束 -->
             <!-- 分頁按鈕 -->                  
-              <div class="d-flex justify-content-center">
+              
 
-                <nav aria-label="Page navigation example">
-                  <ul class="pagination justify-content-center">
-                    <li class="page-item">
-                      <a class="page-link" href="#" aria-label="Previous" id="prev">
-                        <span aria-hidden="true">&laquo;</span>
-                      </a>
-                    </li>
-
-                    <?php
-                    // 計算開始與結束的頁碼
-                    $startPage = max(1, $p - 1);
-                    $endPage = min($perAmount, $startPage + 2);
-
-                    for ($i = $startPage; $i <= $endPage; $i++):
-                      ?>
-                      <li class="page-item">
-                        <a class="page-link <?php if ($i == $p)
-                          echo "active" ?>" href="tables.php?order=1&p=<?= $i ?>">
-                          <?= $i ?>
-                        </a>
-                      </li>
-                    <?php endfor; ?>
-
-                    <li class="page-item">
-                      <a class="page-link" href="#" aria-label="Next" id="next">
-                        <span aria-hidden="true">&raquo;</span>
-                      </a>
-                    </li>
-                  </ul>
-                </nav>
-
-
-              </div>             
+                         
             <!-- footer -->
             <footer class="footer pt-3 pb-3 ">
               <div class="container-fluid">
