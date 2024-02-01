@@ -21,7 +21,7 @@ if (isset($_GET["search"])) { //在搜尋的條件下
 } elseif (isset($_GET["p"])) {
     $p = $_GET["p"];
     $startIndex = ($p - 1) * $perPage; //該頁從第幾筆資料開始顯示
-    $orderString="";
+    $orderString = "";
     $sql = "SELECT * FROM product WHERE valid=1 $orderString LIMIT $startIndex, $perPage";
 } else {
     $p = 1; //預設在第一頁
@@ -60,15 +60,21 @@ if (isset($_GET["search"])) { //如果在搜尋的條件下，顯示共有幾筆
     <!-- CSS Files -->
     <link id="pagestyle" href="../assets/css/argon-dashboard.css?v=2.0.4" rel="stylesheet" />
     <!-- Awesome Font -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body class="g-sidenav-show   bg-gray-100">
     <div class="min-height-300 bg-primary position-absolute w-100"></div>
-    <aside class="sidenav bg-white navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-4 " id="sidenav-main">
+    <aside
+        class="sidenav bg-white navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-4 "
+        id="sidenav-main">
         <div class="sidenav-header">
-            <i class="fas fa-times p-3 cursor-pointer text-secondary opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
-            <a class="navbar-brand m-0" href=" https://demos.creative-tim.com/argon-dashboard/pages/dashboard.html " target="_blank">
+            <i class="fas fa-times p-3 cursor-pointer text-secondary opacity-5 position-absolute end-0 top-0 d-none d-xl-none"
+                aria-hidden="true" id="iconSidenav"></i>
+            <a class="navbar-brand m-0" href=" https://demos.creative-tim.com/argon-dashboard/pages/dashboard.html "
+                target="_blank">
                 <img src="../assets/img/logo-ct-dark.png" class="navbar-brand-img h-100" alt="main_logo">
                 <span class="ms-1 font-weight-bold">MIDTERM PROJECT</span>
             </a>
@@ -78,7 +84,8 @@ if (isset($_GET["search"])) { //如果在搜尋的條件下，顯示共有幾筆
             <ul class="navbar-nav">
                 <li class="nav-item">
                     <a class="nav-link active" href="./pages/dashboard.html">
-                        <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+                        <div
+                            class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                             <i class="ni ni-tv-2 text-primary text-sm opacity-10"></i>
                         </div>
                         <span class="nav-link-text ms-1">主頁面
@@ -87,7 +94,8 @@ if (isset($_GET["search"])) { //如果在搜尋的條件下，顯示共有幾筆
                 </li>
                 <li class="nav-item">
                     <a class="nav-link " href="./pages/tables.html">
-                        <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+                        <div
+                            class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                             <i class="ni ni-calendar-grid-58 text-warning text-sm opacity-10"></i>
                         </div>
                         <span class="nav-link-text ms-1">會員管理/註冊</span>
@@ -95,7 +103,8 @@ if (isset($_GET["search"])) { //如果在搜尋的條件下，顯示共有幾筆
                 </li>
                 <li class="nav-item">
                     <a class="nav-link " href="./pages/billing.html">
-                        <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+                        <div
+                            class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                             <i class="ni ni-credit-card text-success text-sm opacity-10"></i>
                         </div>
                         <span class="nav-link-text ms-1">商品管理</span>
@@ -103,7 +112,8 @@ if (isset($_GET["search"])) { //如果在搜尋的條件下，顯示共有幾筆
                 </li>
                 <li class="nav-item">
                     <a class="nav-link " href="./pages/virtual-reality.html">
-                        <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+                        <div
+                            class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                             <i class="ni ni-app text-info text-sm opacity-10"></i>
                         </div>
                         <span class="nav-link-text ms-1">商品類別管理</span>
@@ -111,7 +121,8 @@ if (isset($_GET["search"])) { //如果在搜尋的條件下，顯示共有幾筆
                 </li>
                 <li class="nav-item">
                     <a class="nav-link " href="./pages/rtl.html">
-                        <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+                        <div
+                            class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                             <i class="ni ni-world-2 text-danger text-sm opacity-10"></i>
                         </div>
                         <span class="nav-link-text ms-1">文章管理</span>
@@ -119,7 +130,8 @@ if (isset($_GET["search"])) { //如果在搜尋的條件下，顯示共有幾筆
                 </li>
                 <li class="nav-item">
                     <a class="nav-link " href="./pages/rtl.html">
-                        <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+                        <div
+                            class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                             <i class="ni ni-world-2 text-danger text-sm opacity-10"></i>
                         </div>
                         <span class="nav-link-text ms-1">訂單管理</span>
@@ -127,7 +139,8 @@ if (isset($_GET["search"])) { //如果在搜尋的條件下，顯示共有幾筆
                 </li>
                 <li class="nav-item">
                     <a class="nav-link " href="./pages/rtl.html">
-                        <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+                        <div
+                            class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                             <i class="ni ni-world-2 text-danger text-sm opacity-10"></i>
                         </div>
                         <span class="nav-link-text ms-1">講師管理</span>
@@ -135,7 +148,8 @@ if (isset($_GET["search"])) { //如果在搜尋的條件下，顯示共有幾筆
                 </li>
                 <li class="nav-item">
                     <a class="nav-link " href="./pages/rtl.html">
-                        <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+                        <div
+                            class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                             <i class="ni ni-world-2 text-danger text-sm opacity-10"></i>
                         </div>
                         <span class="nav-link-text ms-1">課程管理</span>
@@ -143,7 +157,8 @@ if (isset($_GET["search"])) { //如果在搜尋的條件下，顯示共有幾筆
                 </li>
                 <li class="nav-item">
                     <a class="nav-link " href="./pages/rtl.html">
-                        <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+                        <div
+                            class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                             <i class="ni ni-world-2 text-danger text-sm opacity-10"></i>
                         </div>
                         <span class="nav-link-text ms-1">優惠券管理</span>
@@ -155,7 +170,8 @@ if (isset($_GET["search"])) { //如果在搜尋的條件下，顯示共有幾筆
                 </li>
                 <li class="nav-item">
                     <a class="nav-link " href="../pages/profile.html">
-                        <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+                        <div
+                            class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                             <i class="ni ni-single-02 text-dark text-sm opacity-10"></i>
                         </div>
                         <span class="nav-link-text ms-1">個人檔案</span>
@@ -163,7 +179,8 @@ if (isset($_GET["search"])) { //如果在搜尋的條件下，顯示共有幾筆
                 </li>
                 <li class="nav-item">
                     <a class="nav-link " href="../pages/sign-in.html">
-                        <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+                        <div
+                            class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                             <i class="ni ni-single-copy-04 text-warning text-sm opacity-10"></i>
                         </div>
                         <span class="nav-link-text ms-1">登入</span>
@@ -171,7 +188,8 @@ if (isset($_GET["search"])) { //如果在搜尋的條件下，顯示共有幾筆
                 </li>
                 <li class="nav-item">
                     <a class="nav-link " href="../pages/sign-up.html">
-                        <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+                        <div
+                            class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                             <i class="ni ni-collection text-info text-sm opacity-10"></i>
                         </div>
                         <span class="nav-link-text ms-1">登出</span>
@@ -183,11 +201,13 @@ if (isset($_GET["search"])) { //如果在搜尋的條件下，顯示共有幾筆
     </aside>
     <main class="main-content position-relative border-radius-lg ">
         <!-- Navbar -->
-        <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl " id="navbarBlur" data-scroll="false">
+        <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl " id="navbarBlur"
+            data-scroll="false">
             <div class="container-fluid py-1 px-3">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
-                        <li class="breadcrumb-item text-sm"><a class="opacity-5 text-white" href="javascript:;">主頁面</a></li>
+                        <li class="breadcrumb-item text-sm"><a class="opacity-5 text-white" href="javascript:;">主頁面</a>
+                        </li>
                         <li class="breadcrumb-item text-sm text-white active" aria-current="page">商品管理</li>
                     </ol>
                     <!-- <h6 class="font-weight-bolder text-white mb-0">主頁面</h6> -->
@@ -240,8 +260,13 @@ if (isset($_GET["search"])) { //如果在搜尋的條件下，顯示共有幾筆
                             <div class="col">
                                 <form action="">
                                     <div class="input-group">
-                                        <input style="height: 41px;" type="search" class="form-control box-sizing inline-block" placeholder="商品名稱" aria-label="Recipient's username" aria-describedby="button-addon2" name="search" <?php if (isset($_GET["search"])) : $searchValue = $_GET["search"]; ?> value="<?= $searchValue ?>" <?php endif; ?>>
-                                        <button class="btn btn-primary" type="search" id="button-addon2"><i class="fa-solid fa-magnifying-glass fa-fw"></i></button>
+                                        <input style="height: 41px;" type="search"
+                                            class="form-control box-sizing inline-block" placeholder="商品名稱"
+                                            aria-label="Recipient's username" aria-describedby="button-addon2"
+                                            name="search" <?php if (isset($_GET["search"])):
+                                                $searchValue = $_GET["search"]; ?> value="<?= $searchValue ?>" <?php endif; ?>>
+                                        <button class="btn btn-primary" type="search" id="button-addon2"><i
+                                                class="fa-solid fa-magnifying-glass fa-fw"></i></button>
                                     </div>
                                 </form>
                             </div>
@@ -258,65 +283,87 @@ if (isset($_GET["search"])) { //如果在搜尋的條件下，顯示共有幾筆
                             </div>
                             <div class="d-flex justify-content-between align-item-center">
                                 <div>
-                                    共 <?= $rowsCount ?> 筆
+                                    共
+                                    <?= $rowsCount ?> 筆
                                 </div>
                                 <div class="d-flex">
                                     <div class="me-2">排序</div>
                                     <div class="btn-group">
-                                        <a class="btn btn-primary <?php if ($order == 1) echo "active" ?>" href="product-list.php?order=1&p=<?= $p ?>"><i class="fa-solid fa-arrow-down-1-9 fa-fw"></i></a>
-                                        <a class="btn btn-primary <?php if ($order == 2) echo "active" ?>" href="product-lst.php?order=2&p=<?= $p ?>"><i class="fa-solid fa-arrow-down-9-1 fa-fw"></i></a>
-                                        <a class="btn btn-primary <?php if ($order == 3) echo "active" ?>" href="product-list.php?order=3&p=<?= $p ?>"><i class="fa-solid fa-arrow-down-a-z fa-fw"></i></a>
-                                        <a class="btn btn-primary <?php if ($order == 4) echo "active" ?>" href="product-list.php?order=4&p=<?= $p ?>"><i class="fa-solid fa-arrow-down-z-a fa-fw"></i></a>
+                                        <a class="btn btn-primary <?php if ($order == 1)
+                                            echo "active" ?>" href="product-list.php?order=1&p=<?= $p ?>"><i
+                                                class="fa-solid fa-arrow-down-1-9 fa-fw"></i></a>
+                                        <a class="btn btn-primary <?php if ($order == 2)
+                                            echo "active" ?>" href="product-lst.php?order=2&p=<?= $p ?>"><i
+                                                class="fa-solid fa-arrow-down-9-1 fa-fw"></i></a>
+                                        <a class="btn btn-primary <?php if ($order == 3)
+                                            echo "active" ?>" href="product-list.php?order=3&p=<?= $p ?>"><i
+                                                class="fa-solid fa-arrow-down-a-z fa-fw"></i></a>
+                                        <a class="btn btn-primary <?php if ($order == 4)
+                                            echo "active" ?>" href="product-list.php?order=4&p=<?= $p ?>"><i
+                                                class="fa-solid fa-arrow-down-z-a fa-fw"></i></a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="card-body px-0 pt-0 pb-2">
                             <div class="table-responsive p-0">
-                                <?php if ($rowsCount > 0) : ?>
+                                <?php if ($rowsCount > 0): ?>
                                     <table class="table align-items-center mb-0">
                                         <thead>
                                             <tr>
                                                 <th class="text-secondary text-s font-weight-bolder opacity-7">商品名稱</th>
                                                 <th class="text-secondary text-s font-weight-bolder opacity-7 ps-2">價錢</th>
                                                 <th class="text-secondary text-s font-weight-bolder opacity-7 ps-2">庫存</th>
-                                                <th class="text-center text-uppercase text-secondary text-s font-weight-bolder opacity-7">更新時間</th>
+                                                <th
+                                                    class="text-center text-uppercase text-secondary text-s font-weight-bolder opacity-7">
+                                                    更新時間</th>
                                                 <th class="text-secondary text-center opacity-7">檢視</th>
                                                 <th class="text-secondary text-center opacity-7">修改</th>
                                                 <th class="text-secondary text-center opacity-7">刪除</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <?php foreach ($rows as $product) :?>
+                                            <?php foreach ($rows as $product): ?>
                                                 <tr>
                                                     <td>
                                                         <div class="d-flex px-2 py-1">
                                                             <div class="d-flex flex-column justify-content-center">
-                                                                <h6 class="mb-0 text-m"><?= $product["name"] ?></h6>
+                                                                <h6 class="mb-0 text-m">
+                                                                    <?= $product["name"] ?>
+                                                                </h6>
                                                             </div>
                                                         </div>
                                                     </td>
                                                     <td>
-                                                        <h6 class="mb-0 text-m"><?= $product["price"] ?></h6>
+                                                        <h6 class="mb-0 text-m">
+                                                            <?= $product["price"] ?>
+                                                        </h6>
                                                     </td>
                                                     <td>
-                                                        <h6 class="mb-0 text-m"><?= $product["amount"] ?></h6>
+                                                        <h6 class="mb-0 text-m">
+                                                            <?= $product["amount"] ?>
+                                                        </h6>
                                                     </td>
                                                     <td class="align-middle text-center">
-                                                        <span class="text-secondary text-m font-weight-bold"><?= $product["update"] ?></span>
+                                                        <span class="text-secondary text-m font-weight-bold">
+                                                            <?= $product["update"] ?>
+                                                        </span>
                                                     </td>
                                                     <td class="align-middle text-center">
-                                                        <a href="javascript:;" class="text-secondary font-weight-bold text-m" data-toggle="tooltip" data-original-title="Edit user">
+                                                        <a href="javascript:;" class="text-secondary font-weight-bold text-m"
+                                                            data-toggle="tooltip" data-original-title="Edit user">
                                                             <i class="fa-solid fa-eye fa-fw"></i>
                                                         </a>
                                                     </td>
                                                     <td class="align-middle text-center">
-                                                        <a href="javascript:;" class="text-secondary font-weight-bold text-m" data-toggle="tooltip" data-original-title="Edit user">
+                                                        <a href="javascript:;" class="text-secondary font-weight-bold text-m"
+                                                            data-toggle="tooltip" data-original-title="Edit user">
                                                             <i class="fa-solid fa-pen-to-square fa-fw"></i>
                                                         </a>
                                                     </td>
                                                     <td class="align-middle text-center">
-                                                        <a href="javascript:;" class="text-secondary font-weight-bold text-m" data-toggle="tooltip" data-original-title="Edit user">
+                                                        <a href="javascript:;" class="text-secondary font-weight-bold text-m"
+                                                            data-toggle="tooltip" data-original-title="Edit user">
                                                             <i class="fa-solid fa-trash-can fa-fw"></i>
                                                         </a>
                                                     </td>
@@ -324,59 +371,67 @@ if (isset($_GET["search"])) { //如果在搜尋的條件下，顯示共有幾筆
                                             <?php endforeach; ?>
                                         </tbody>
                                     </table>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <!-- 商品列表結束 -->
-            <!-- 在搜尋的情況下不顯示分頁 -->
-            <?php if (!isset($_GET["search"])) : ?>
-                <nav aria-label="Page navigation example">
-                    <ul class="pagination">
-                        <?php for ($i = 1; $i <= $pageCount; $i++) : ?>
-                            <li class="page-item <?php if ($i == $p) echo "active" ?>">
-                                <a class="page-link" href="product-list.php?order=<?= $order ?>&p=<?= $i ?><?php if (isset($_GET["search"])) echo "&search=$searchValue" ?>">
-                                    <?= $i ?>
-                                </a>
-                            </li>
-                        <?php endfor; ?>
-                    </ul>
-                </nav>
+                <!-- 商品列表結束 -->
+                <!-- 在搜尋的情況下不顯示分頁 -->
+                <?php if (!isset($_GET["search"])): ?>
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination">
+                            <?php for ($i = 1; $i <= $pageCount; $i++): ?>
+                                <li class="page-item <?php if ($i == $p)
+                                    echo "active" ?>">
+                                        <a class="page-link" href="product-list.php?order=<?= $order ?>&p=<?= $i ?><?php if (isset($_GET["search"]))
+                                                echo "&search=$searchValue" ?>">
+                                        <?= $i ?>
+                                    </a>
+                                </li>
+                            <?php endfor; ?>
+                        </ul>
+                    </nav>
+                <?php endif; ?>
             <?php endif; ?>
-        <?php endif; ?>
-        <footer class="footer pt-3  ">
-            <div class="container-fluid">
-                <div class="row align-items-center justify-content-lg-between">
-                    <div class="col-lg-6 mb-lg-0 mb-4">
-                        <div class="copyright text-center text-sm text-muted text-lg-start">
-                            © <script>
-                                document.write(new Date().getFullYear())
-                            </script>,
-                            made with <i class="fa fa-heart"></i> by
-                            <a href="https://www.creative-tim.com" class="font-weight-bold" target="_blank">Creative Tim</a>
-                            for a better web.
+            <footer class="footer pt-3  ">
+                <div class="container-fluid">
+                    <div class="row align-items-center justify-content-lg-between">
+                        <div class="col-lg-6 mb-lg-0 mb-4">
+                            <div class="copyright text-center text-sm text-muted text-lg-start">
+                                ©
+                                <script>
+                                    document.write(new Date().getFullYear())
+                                </script>,
+                                made with <i class="fa fa-heart"></i> by
+                                <a href="https://www.creative-tim.com" class="font-weight-bold" target="_blank">Creative
+                                    Tim</a>
+                                for a better web.
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <ul class="nav nav-footer justify-content-center justify-content-lg-end">
+                                <li class="nav-item">
+                                    <a href="https://www.creative-tim.com" class="nav-link text-muted"
+                                        target="_blank">Creative Tim</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="https://www.creative-tim.com/presentation" class="nav-link text-muted"
+                                        target="_blank">About Us</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="https://www.creative-tim.com/blog" class="nav-link text-muted"
+                                        target="_blank">Blog</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="https://www.creative-tim.com/license" class="nav-link pe-0 text-muted"
+                                        target="_blank">License</a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
-                    <div class="col-lg-6">
-                        <ul class="nav nav-footer justify-content-center justify-content-lg-end">
-                            <li class="nav-item">
-                                <a href="https://www.creative-tim.com" class="nav-link text-muted" target="_blank">Creative Tim</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="https://www.creative-tim.com/presentation" class="nav-link text-muted" target="_blank">About Us</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="https://www.creative-tim.com/blog" class="nav-link text-muted" target="_blank">Blog</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="https://www.creative-tim.com/license" class="nav-link pe-0 text-muted" target="_blank">License</a>
-                            </li>
-                        </ul>
-                    </div>
                 </div>
-            </div>
-        </footer>
+            </footer>
         </div>
     </main>
     <div class="fixed-plugin">
@@ -404,12 +459,18 @@ if (isset($_GET["search"])) { //如果在搜尋的條件下，顯示共有幾筆
                 </div>
                 <a href="javascript:void(0)" class="switch-trigger background-color">
                     <div class="badge-colors my-2 text-start">
-                        <span class="badge filter bg-gradient-primary active" data-color="primary" onclick="sidebarColor(this)"></span>
-                        <span class="badge filter bg-gradient-dark" data-color="dark" onclick="sidebarColor(this)"></span>
-                        <span class="badge filter bg-gradient-info" data-color="info" onclick="sidebarColor(this)"></span>
-                        <span class="badge filter bg-gradient-success" data-color="success" onclick="sidebarColor(this)"></span>
-                        <span class="badge filter bg-gradient-warning" data-color="warning" onclick="sidebarColor(this)"></span>
-                        <span class="badge filter bg-gradient-danger" data-color="danger" onclick="sidebarColor(this)"></span>
+                        <span class="badge filter bg-gradient-primary active" data-color="primary"
+                            onclick="sidebarColor(this)"></span>
+                        <span class="badge filter bg-gradient-dark" data-color="dark"
+                            onclick="sidebarColor(this)"></span>
+                        <span class="badge filter bg-gradient-info" data-color="info"
+                            onclick="sidebarColor(this)"></span>
+                        <span class="badge filter bg-gradient-success" data-color="success"
+                            onclick="sidebarColor(this)"></span>
+                        <span class="badge filter bg-gradient-warning" data-color="warning"
+                            onclick="sidebarColor(this)"></span>
+                        <span class="badge filter bg-gradient-danger" data-color="danger"
+                            onclick="sidebarColor(this)"></span>
                     </div>
                 </a>
                 <!-- Sidenav Type -->
@@ -418,33 +479,44 @@ if (isset($_GET["search"])) { //如果在搜尋的條件下，顯示共有幾筆
                     <p class="text-sm">Choose between 2 different sidenav types.</p>
                 </div>
                 <div class="d-flex">
-                    <button class="btn bg-gradient-primary w-100 px-3 mb-2 active me-2" data-class="bg-white" onclick="sidebarType(this)">White</button>
-                    <button class="btn bg-gradient-primary w-100 px-3 mb-2" data-class="bg-default" onclick="sidebarType(this)">Dark</button>
+                    <button class="btn bg-gradient-primary w-100 px-3 mb-2 active me-2" data-class="bg-white"
+                        onclick="sidebarType(this)">White</button>
+                    <button class="btn bg-gradient-primary w-100 px-3 mb-2" data-class="bg-default"
+                        onclick="sidebarType(this)">Dark</button>
                 </div>
                 <p class="text-sm d-xl-none d-block mt-2">You can change the sidenav type just on desktop view.</p>
                 <!-- Navbar Fixed -->
                 <div class="d-flex my-3">
                     <h6 class="mb-0">Navbar Fixed</h6>
                     <div class="form-check form-switch ps-0 ms-auto my-auto">
-                        <input class="form-check-input mt-1 ms-auto" type="checkbox" id="navbarFixed" onclick="navbarFixed(this)">
+                        <input class="form-check-input mt-1 ms-auto" type="checkbox" id="navbarFixed"
+                            onclick="navbarFixed(this)">
                     </div>
                 </div>
                 <hr class="horizontal dark my-sm-4">
                 <div class="mt-2 mb-5 d-flex">
                     <h6 class="mb-0">Light / Dark</h6>
                     <div class="form-check form-switch ps-0 ms-auto my-auto">
-                        <input class="form-check-input mt-1 ms-auto" type="checkbox" id="dark-version" onclick="darkMode(this)">
+                        <input class="form-check-input mt-1 ms-auto" type="checkbox" id="dark-version"
+                            onclick="darkMode(this)">
                     </div>
                 </div>
-                <a class="btn bg-gradient-dark w-100" href="https://www.creative-tim.com/product/argon-dashboard">Free Download</a>
-                <a class="btn btn-outline-dark w-100" href="https://www.creative-tim.com/learning-lab/bootstrap/license/argon-dashboard">View documentation</a>
+                <a class="btn bg-gradient-dark w-100" href="https://www.creative-tim.com/product/argon-dashboard">Free
+                    Download</a>
+                <a class="btn btn-outline-dark w-100"
+                    href="https://www.creative-tim.com/learning-lab/bootstrap/license/argon-dashboard">View
+                    documentation</a>
                 <div class="w-100 text-center">
-                    <a class="github-button" href="https://github.com/creativetimofficial/argon-dashboard" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star creativetimofficial/argon-dashboard on GitHub">Star</a>
+                    <a class="github-button" href="https://github.com/creativetimofficial/argon-dashboard"
+                        data-icon="octicon-star" data-size="large" data-show-count="true"
+                        aria-label="Star creativetimofficial/argon-dashboard on GitHub">Star</a>
                     <h6 class="mt-3">Thank you for sharing!</h6>
-                    <a href="https://twitter.com/intent/tweet?text=Check%20Argon%20Dashboard%20made%20by%20%40CreativeTim%20%23webdesign%20%23dashboard%20%23bootstrap5&amp;url=https%3A%2F%2Fwww.creative-tim.com%2Fproduct%2Fargon-dashboard" class="btn btn-dark mb-0 me-2" target="_blank">
+                    <a href="https://twitter.com/intent/tweet?text=Check%20Argon%20Dashboard%20made%20by%20%40CreativeTim%20%23webdesign%20%23dashboard%20%23bootstrap5&amp;url=https%3A%2F%2Fwww.creative-tim.com%2Fproduct%2Fargon-dashboard"
+                        class="btn btn-dark mb-0 me-2" target="_blank">
                         <i class="fab fa-twitter me-1" aria-hidden="true"></i> Tweet
                     </a>
-                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.creative-tim.com/product/argon-dashboard" class="btn btn-dark mb-0 me-2" target="_blank">
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.creative-tim.com/product/argon-dashboard"
+                        class="btn btn-dark mb-0 me-2" target="_blank">
                         <i class="fab fa-facebook-square me-1" aria-hidden="true"></i> Share
                     </a>
                 </div>
