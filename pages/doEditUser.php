@@ -9,7 +9,9 @@ $phone = trim($_POST["editPhone"]);
 $address = trim($_POST["editAddress"]);
 $creditnumber = trim($_POST["editCreditNumber"]);
 
-$sql="UPDATE user SET name='$name',email='$email',birthday='$birthday',phone='$phone',address='$address',credit_number='$creditnumber' WHERE id=$id";
+
+
+$sql="UPDATE user SET name='$name',email='$email',birthday='$birthday',phone='$phone',address='$address',credit_number='$creditnumber'  WHERE id=$id";
 
 if ($conn->query($sql)===TRUE) {
     // echo "資料表 users 更新完成";
@@ -18,6 +20,6 @@ if ($conn->query($sql)===TRUE) {
 
 };
 
-header("location: ../pages/member.php");
+// header("location: ../pages/member.php");
 
 ?>

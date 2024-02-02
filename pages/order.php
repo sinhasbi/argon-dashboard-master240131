@@ -18,20 +18,11 @@ JOIN product ON `order`.product_id = product.id
 
 
 $result = $conn->query($sql);
-/* echo "$result";
-exit; */
 $rowCount = $result->num_rows;
 $rows = $result->fetch_all(MYSQLI_ASSOC);
 
 ?>
-<pre>
-  <?php
-      // print_r($rows);
-      // exit;
-      
-  ?>
 
-</pre>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -91,7 +82,7 @@ $rows = $result->fetch_all(MYSQLI_ASSOC);
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link " href="../pages/tables.php">
+          <a class="nav-link " href="../pages/member.php">
             <div
               class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
               <i class="ni ni-calendar-grid-58 text-warning text-sm opacity-10"></i>
@@ -109,7 +100,7 @@ $rows = $result->fetch_all(MYSQLI_ASSOC);
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link " href="./pages/virtual-reality.html">
+          <a class="nav-link " href="../pages/primary_category.php">
             <div
               class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
               <i class="ni ni-app text-info text-sm opacity-10"></i>
@@ -118,7 +109,7 @@ $rows = $result->fetch_all(MYSQLI_ASSOC);
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link " href="./pages/rtl.html">
+          <a class="nav-link " href="../pages/articles.php">
             <div
               class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
               <i class="ni ni-world-2 text-danger text-sm opacity-10"></i>
@@ -127,7 +118,7 @@ $rows = $result->fetch_all(MYSQLI_ASSOC);
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="./pages/rtl.html">
+          <a class="nav-link active" href="../pages/order.php">
             <div
               class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
               <i class="ni ni-world-2 text-danger text-sm opacity-10"></i>
@@ -136,7 +127,7 @@ $rows = $result->fetch_all(MYSQLI_ASSOC);
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link " href="./pages/rtl.html">
+          <a class="nav-link " href="../pages/teachers.php">
             <div
               class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
               <i class="ni ni-world-2 text-danger text-sm opacity-10"></i>
@@ -154,7 +145,7 @@ $rows = $result->fetch_all(MYSQLI_ASSOC);
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link " href="./pages/rtl.html">
+          <a class="nav-link " href="../pages/trrry.php">
             <div
               class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
               <i class="ni ni-world-2 text-danger text-sm opacity-10"></i>

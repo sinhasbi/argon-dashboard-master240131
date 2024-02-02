@@ -5,13 +5,12 @@ $perPage = 10;
 
 
 //計算總數用的
-$sql = "SELECT * FROM user WHERE valid=1 ";
-$resultTotal = $conn->query($sql);
-$rowTotal = $resultTotal->fetch_all(MYSQLI_ASSOC);
+$sqlAll = "SELECT * FROM user WHERE valid=1 ";
+$resultAll = $conn->query($sqlAll);
+$userTotalCount = $resultAll->num_rows;
 
-$userTotal = $resultTotal->num_rows;
 
-$perAmount = ceil($userTotal / $perPage);
+$perAmount = ceil($userTotalCount / $perPage);
 
 
 
@@ -28,7 +27,7 @@ if (isset($_GET["order"])) {
 if (isset($_GET["search"])) {
   $search = $_GET["search"];
   $sql = "SELECT * FROM user WHERE name LIKE '%$search%'  AND valid=1 ";
-} elseif (isset($_GET["p"]) || $_GET["search"] = "") {
+} elseif (isset($_GET["p"]) ) {
   $p = $_GET["p"];
   $startIndex = ($p - 1) * $perPage;
   $sql = "SELECT * FROM user WHERE valid=1  $orderString LIMIT $startIndex,$perPage ";
@@ -41,8 +40,12 @@ if (isset($_GET["search"])) {
 
 $result = $conn->query($sql);
 
-if (isset($_GET["search"])) {
-  $userTotal = $result->num_rows;
+if (!isset($_GET["search"])) {
+  $userCount=$userTotalCount;
+}else{
+  
+  $userCount = $result->num_rows;
+
 }
 
 
@@ -166,7 +169,7 @@ if (isset($_GET["search"])) {
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link " href="./pages/rtl.html">
+          <a class="nav-link " href="../pages/trrry.php">
             <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
               <i class="ni ni-world-2 text-danger text-sm opacity-10"></i>
             </div>
@@ -280,7 +283,7 @@ if (isset($_GET["search"])) {
               <div class="py-2 d-flex justify-content-between align-items-center">
                 <div>
                   共
-                  <?= $userTotal ?> 筆
+                  <?= $userCount ?> 筆
                 </div>
                 <div class="d-flex justify-content-end">
 
@@ -334,7 +337,7 @@ if (isset($_GET["search"])) {
                             </p>
                           </td>
                           <td class="text-center">
-                            <div class="d-flex justify-content-center">
+                            <div class="d-flex justify-content-center align-items-center">
 
                               <img src="../images/<?= $user["img"] ?>" class="avatar avatar-sm me-3" alt="<?= $user["name"] ?>">
 
@@ -452,7 +455,7 @@ if (isset($_GET["search"])) {
                                     <div>
                                       <!-- 修改 -->
                                       <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editModal<?= $user["id"] ?>">
-                                        <i class="fa-solid fa-user-pen fa-fw"></i>
+                                        編輯
                                       </button>
                                       <!-- 刪除 -->
                                       <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#confirmModal<?= $user["id"] ?>" role="button"><i class="fa-solid fa-trash fa-fw"></i>
@@ -516,9 +519,15 @@ if (isset($_GET["search"])) {
                                               <tr class="border-end">
                                                 <th>信用卡號</th>
                                                 <td>
-                                                  <input type="text" class="form-control" name="editCreditNumber" style="width: 100%;" value="<?= $user["credit_number"] ?>">
+                                                  <input type="text" class="form-control" name="editCreditNumber"  value="<?= $user["credit_number"] ?>">
                                                 </td>
                                               </tr>
+                                              <!-- <tr class="border-end">
+                                                <th>更換大頭貼</th>
+                                                <td>
+                                                  <input type="file" class="form-control" name="editImg">
+                                                </td>
+                                              </tr> -->
 
                                             </table>
                                           </div>
