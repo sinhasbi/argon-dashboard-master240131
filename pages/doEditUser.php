@@ -20,6 +20,6 @@ if ($conn->query($sql)===TRUE) {
 
 };
 
-// header("location: ../pages/member.php");
+header("location: ../pages/member.php");
 
 ?>

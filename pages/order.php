@@ -1,7 +1,6 @@
 <?php
 require_once("../db_connect.php");
-$p=1;
-$perAmount=10;
+
 
 
 $sql="SELECT `order`.*,
@@ -10,10 +9,10 @@ user.name AS order_user,
 product.name AS order_product
 
 FROM `order`
-
+ 
 JOIN order_status ON `order`.order_status= order_status.id
-JOIN user ON `order`.user_id = user.id
-JOIN product ON `order`.product_id = product.id
+JOIN user ON `order`.user_id=user.id
+JOIN product ON `order`.product_id=product.id
 ";
 
 
@@ -21,7 +20,10 @@ $result = $conn->query($sql);
 $rowCount = $result->num_rows;
 $rows = $result->fetch_all(MYSQLI_ASSOC);
 
+
+
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -354,7 +356,7 @@ $rows = $result->fetch_all(MYSQLI_ASSOC);
                               data-bs-target="#editBackdrop<?= $order["id"] ?>">
                               <i class="fa-solid fa-eye fa-fw text-white"></i></button>
 
-                            >
+                            
                             <!-- 按修改會跳出來的東西 (完成)-->
                             <div class="modal fade" id="editModal<?= $order["id"] ?>" tabindex="-1"
                               aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -530,48 +532,7 @@ $rows = $result->fetch_all(MYSQLI_ASSOC);
     </div>
 
   </main>
-  <!-- 頁碼的JS -->
-  <script>
-    $(document).ready(function () {
-      var totalPages = <?= $perAmount ?>;
-      var currentPage = <?= $p ?>;
 
-      function generatePaginationItems() {
-        var startPage = Math.max(1, currentPage - 1);
-        var endPage = Math.min(totalPages, startPage + 2);
-
-        $('.pagination').empty();
-
-        $('.pagination').append('<li class="page-item"><a class="page-link" href="#" aria-label="Previous" id="prev"><span aria-hidden="true">&laquo;</span></a></li>');
-
-        for (var i = startPage; i <= endPage; i++) {
-          var activeClass = (i === currentPage) ? 'active' : '';
-          $('.pagination').append('<li class="page-item ' + activeClass + '"><a class="page-link" href="tables.php?order=1&p=' + i + '">' + i + '</a></li>');
-        }
-
-        $('.pagination').append('<li class="page-item"><a class="page-link" href="#" aria-label="Next" id="next"><span aria-hidden="true">&raquo;</span></a></li>');
-      }
-
-      generatePaginationItems();
-
-      $('.pagination').on('click', '#prev', function (e) {
-        e.preventDefault();
-        if (currentPage > 1) {
-          currentPage--;
-          generatePaginationItems();
-        }
-      });
-
-      $('.pagination').on('click', '#next', function (e) {
-        e.preventDefault();
-        if (currentPage < totalPages) {
-          currentPage++;
-          generatePaginationItems();
-        }
-      });
-    });
-  </script>
-  <!-- 頁碼的JS結束 -->
 
 
 
