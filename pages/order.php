@@ -242,18 +242,18 @@ $rows = $result->fetch_all(MYSQLI_ASSOC);
               <!-- 新增使用者 -->
               <div class="d-flex justify-content-lg-between">
 
-                <h4>會員資料</h4>
+                <h4>訂單總攬</h4>
 
-                <div>
+                <!-- <div>
                   新增
                   <a name="" id="" class="btn btn-primary" href="register.php" role="button">
                     <i class="fa-solid fa-user-plus fa-fw"></i>
                   </a>
-                </div>
+                </div> -->
 
               </div>
               <!-- SEARCH -->
-              <div class="col">
+              <!-- <div class="col">
                 <form action="">
                   <div class="input-group">
                     <input style="height: 41px;" type="search" class="form-control box-sizing inline-block"
@@ -265,7 +265,7 @@ $rows = $result->fetch_all(MYSQLI_ASSOC);
                         class="fa-solid fa-magnifying-glass fa-fw"></i></button>
                   </div>
                 </form>
-              </div>
+              </div> -->
               <!-- ORDER -->
               <div class="py-2 d-flex justify-content-between align-items-center">
                 <div>
@@ -357,119 +357,7 @@ $rows = $result->fetch_all(MYSQLI_ASSOC);
                               <i class="fa-solid fa-eye fa-fw text-white"></i></button>
 
                             
-                            <!-- 按修改會跳出來的東西 (完成)-->
-                            <div class="modal fade" id="editModal<?= $order["id"] ?>" tabindex="-1"
-                              aria-labelledby="exampleModalLabel" aria-hidden="true">
-                              <div class="modal-dialog modal-xl">
-                                <form action="doEditUser.php" method="post">
-                                  <div class="modal-content">
-                                    <div class="modal-header">
-                                      <h1 class="modal-title fs-5" id="exampleModalLabel">修改訂單資料</h1>
-                                      <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">
-                                      <div class="container">
-                                        <div class="row">
-
-                                          <div class="col-4 ">
-                                            <img src="../images/<?= $user["img"] ?>" alt="<?= $user["name"] ?>"
-                                              width="300px" height="300px" class="mt-3">
-                                          </div>
-
-                                          <div class="col-8">
-                                            <input type="hidden" class="form-control" name="editId"
-                                              value="<?= $user["id"] ?>">
-                                            <!-- 修改內容的欄位 -->
-                                            <table class="table table-bordered">
-                                              <tr class="border-end">
-                                                <th>名字</th>
-                                                <td>
-                                                  <input type="text" class="form-control" name="editName"
-                                                    value="<?= $user["name"] ?>">
-
-                                                </td>
-                                              </tr>
-                                              <tr class="border-end">
-                                                <th>信箱</th>
-                                                <td>
-                                                  <input type="text" class="form-control" name="editEmail"
-                                                    value="<?= $user["email"] ?>">
-                                                </td>
-                                              </tr>
-                                              <tr class="border-end">
-                                                <th>生日</th>
-                                                <td>
-                                                  <input type="date" class="form-control" name="editBirthday"
-                                                    value="<?= $user["birthday"] ?>">
-                                                </td>
-                                              </tr>
-                                              <tr class="border-end">
-                                                <th>手機號碼</th>
-                                                <td><input type="text" class="form-control" name="editPhone"
-                                                    value=" <?= $user["phone"] ?>">
-                                                </td>
-                                              </tr>
-                                              <tr class="border-end">
-                                                <th>地址</th>
-                                                <td>
-                                                  <input type="text" class="form-control" name="editAddress"
-                                                    value="<?= $user["address"] ?>">
-                                                </td>
-                                              </tr>
-                                              <tr class="border-end">
-                                                <th>信用卡號</th>
-                                                <td>
-                                                  <input type="text" class="form-control" name="editCreditNumber"
-                                                    style="width: 100%;" value="<?= $user["credit_number"] ?>">
-                                                </td>
-                                              </tr>
-
-                                            </table>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                    <div class="modal-footer">
-                                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
-                                      <button type="submit" class="btn btn-danger">確認</button>
-                                    </div>
-
-                                  </div>
-                                </form>
-                              </div>
-
-
-                            </div>
-                            <!-- 按刪除會跳出來的東西 -->
-                            <div class="modal fade" id="confirmModal<?= $user["id"] ?>" tabindex="-1"
-                              aria-labelledby="exampleModalLabel" aria-hidden="true">
-                              <div class="modal-dialog">
-                                <div class="modal-content">
-                                  <div class="modal-header">
-                                    <h1 class="modal-title fs-5" id="exampleModalLabel">刪除使用者</h1>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                      aria-label="Close"></button>
-                                  </div>
-                                  <div class="modal-body">
-                                    確認刪除?
-                                  </div>
-                                  <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
-                                    <a type="button" href="doDeleteUser.php?id=<?= $user["id"] ?>" class="btn btn-danger"
-                                      role="button">確認</a>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-
-
-                            <!-- 刪除按鈕 -->
-                            <button class="btn btn-danger" data-bs-toggle="modal"
-                              data-bs-target="#confirmModal<?= $user["id"] ?>" role="button">
-                              <i class="fa-solid fa-trash fa-fw"></i>
-                            </button>
-                          </td>
+                            
                         </tr>
                       <?php endforeach;
                     } ?>
